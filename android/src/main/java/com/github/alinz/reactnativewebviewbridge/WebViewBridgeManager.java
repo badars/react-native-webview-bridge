@@ -69,7 +69,7 @@ public class WebViewBridgeManager extends ReactWebViewManager {
   private void injectBridgeScript(WebView root) {
     //this code needs to be called once per context
     if (!initializedBridge) {
-      root.addJavascriptInterface(new JavascriptBridge((ReactContext) root.getContext()), "WebViewBridgeAndroid");
+      root.addJavascriptInterface(new JavascriptBridge((ReactContext) root.getContext()), "WebViewBridge");
       initializedBridge = true;
       root.reload();
     }
